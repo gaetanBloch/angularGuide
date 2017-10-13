@@ -1,7 +1,20 @@
+<label>Server Binding</label>
+<!--<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+  <p>{{serverName}}</p>
 <button
   class="btn btn-primary"
-  [disabled]="!allowNewServer">Add server
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">
+  Add server
 </button>
-<p>{{allowNewServer}}</p>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p></p>
 <app-server></app-server>
 <app-server></app-server>
